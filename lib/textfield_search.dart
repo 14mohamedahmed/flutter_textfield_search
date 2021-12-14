@@ -23,7 +23,7 @@ class TextFieldSearch extends StatefulWidget {
       this.future,
       this.getSelectedValue,
       this.decoration,
-      this.minStringLength = 2 })
+      this.minStringLength = 2})
       : super(key: key);
 
   @override
@@ -189,7 +189,7 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    widget.controller.dispose();
+    // widget.controller.dispose();
     super.dispose();
   }
 
@@ -312,7 +312,9 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
       child: TextField(
         controller: widget.controller,
         focusNode: this._focusNode,
-        decoration: widget.decoration != null ? widget.decoration : InputDecoration(labelText: widget.label),
+        decoration: widget.decoration != null
+            ? widget.decoration
+            : InputDecoration(labelText: widget.label),
         style: widget.textStyle,
         onChanged: (String value) {
           // every time we make a change to the input, update the list
